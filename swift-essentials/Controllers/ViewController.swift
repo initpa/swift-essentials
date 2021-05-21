@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     // MARK: - Handlers
 
     @objc fileprivate func didTapTableView() {
-        let tableVC = TableViewController()
+        let tableVC = UINavigationController(rootViewController: TableViewController())
         tableVC.modalPresentationStyle = .overCurrentContext
         present(tableVC, animated: true)
     }
