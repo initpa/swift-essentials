@@ -27,28 +27,48 @@ class ViewController: UIViewController {
         return collectionViewButton
     }()
     
+    let getKanyeQuote: UIButton = {
+        let button = UIButton()
+        button.setTitle("get kanye quote", for: .normal)
+        button.backgroundColor = .systemBlue
+        button.addTarget(self, action: #selector(didTapKanyeQuote), for: .touchUpInside)
+        return button
+    }()
     // MARK: - Initialisation
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("this is view did load")
         title = "Home"
         view.backgroundColor = .systemBackground
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("this is view wiil appear")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("this is view did appear")
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         view.addSubview(tableViewButton)
         view.addSubview(collectionViewButton)
+        view.addSubview(getKanyeQuote)
         
         tableViewButton.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 8, paddingLeft: 8, paddingBottom: 0, paddingRight: 8, width: 0, height: 44)
         collectionViewButton.anchor(top: tableViewButton.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 8, paddingLeft: 8, paddingBottom: 0, paddingRight: 8, width: 0, height: 44)
+        getKanyeQuote.anchor(top: collectionViewButton.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 8, paddingLeft: 8, paddingBottom: 0, paddingRight: 8, width: 0, height: 44)
     }
     
     // MARK: - Handlers
 
     @objc fileprivate func didTapTableView() {
         let tableVC = UINavigationController(rootViewController: TableViewController())
-        tableVC.modalPresentationStyle = .overCurrentContext
+        tableVC.modalPresentationStyle = .fullScreen
         present(tableVC, animated: true)
     }
     
@@ -56,6 +76,17 @@ class ViewController: UIViewController {
         let collectionVC = CollectionViewController()
         collectionVC.modalPresentationStyle = .overCurrentContext
         present(collectionVC, animated: true)
+    }
+    
+    @objc fileprivate func didTapKanyeQuote() {
+        KanyeQuoteManager.shared.getKanyeQuote { (result) in
+            switch result {
+            case .success(let kanye):
+                print(kanye.quote)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
 
