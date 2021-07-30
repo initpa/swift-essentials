@@ -11,6 +11,15 @@ import UIKit
 class ViewController: UIViewController {
     
     // MARK: - Properties
+    
+    let toastButton: UIButton = {
+        let toast = UIButton()
+        toast.setTitle("toast", for: .normal)
+        toast.backgroundColor = .systemBlue
+        toast.addTarget(self, action: #selector(didTapToast), for: .touchUpInside)
+        return toast
+    }()
+    
     let tableViewButton: UIButton = {
         let tableViewButton = UIButton()
         tableViewButton.setTitle("tableView", for: .normal)
@@ -58,10 +67,13 @@ class ViewController: UIViewController {
         view.addSubview(tableViewButton)
         view.addSubview(collectionViewButton)
         view.addSubview(getKanyeQuote)
+        view.addSubview(toastButton)
         
         tableViewButton.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 8, paddingLeft: 8, paddingBottom: 0, paddingRight: 8, width: 0, height: 44)
         collectionViewButton.anchor(top: tableViewButton.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 8, paddingLeft: 8, paddingBottom: 0, paddingRight: 8, width: 0, height: 44)
         getKanyeQuote.anchor(top: collectionViewButton.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 8, paddingLeft: 8, paddingBottom: 0, paddingRight: 8, width: 0, height: 44)
+        toastButton.anchor(top: getKanyeQuote.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 8, paddingLeft: 8, paddingBottom: 0, paddingRight: 8, width: 0, height: 44)
+        
     }
     
     // MARK: - Handlers
@@ -87,6 +99,10 @@ class ViewController: UIViewController {
                 print(error)
             }
         }
+    }
+    
+    @objc fileprivate func didTapToast() {
+        showToast(message: "Poor Internet")
     }
 }
 

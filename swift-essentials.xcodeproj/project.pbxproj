@@ -19,6 +19,7 @@
 		C76FDBF8263B0EB50079EA59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C76FDBF7263B0EB50079EA59 /* Assets.xcassets */; };
 		C76FDBFB263B0EB50079EA59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C76FDBF9263B0EB50079EA59 /* LaunchScreen.storyboard */; };
 		C7CF6652263D320600C1D639 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CF6651263D320600C1D639 /* Extentions.swift */; };
+		C7E3C9D72666238C001F0570 /* KanyeQuoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E3C9D62666238C001F0570 /* KanyeQuoteManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		C76FDBFA263B0EB50079EA59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C76FDBFC263B0EB50079EA59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7CF6651263D320600C1D639 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		C7E3C9D62666238C001F0570 /* KanyeQuoteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanyeQuoteManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				C7CF6650263D30FE00C1D639 /* Application */,
+				C7E3C9D526662359001F0570 /* Services */,
 				C7CF664F263D30F700C1D639 /* Helpers */,
 				C7CF664E263D30E300C1D639 /* Models */,
 				C7CF664D263D30DA00C1D639 /* View Models */,
@@ -139,6 +142,14 @@
 				C76FDBF0263B0EB20079EA59 /* SceneDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		C7E3C9D526662359001F0570 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C7E3C9D62666238C001F0570 /* KanyeQuoteManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +226,7 @@
 				C7CF6652263D320600C1D639 /* Extentions.swift in Sources */,
 				C734594E2657776E00B0D97C /* TableViewController.swift in Sources */,
 				C76FDBF3263B0EB20079EA59 /* ViewController.swift in Sources */,
+				C7E3C9D72666238C001F0570 /* KanyeQuoteManager.swift in Sources */,
 				C76FDBEF263B0EB20079EA59 /* AppDelegate.swift in Sources */,
 				C76FDBF1263B0EB20079EA59 /* SceneDelegate.swift in Sources */,
 				C73459552657869700B0D97C /* CollectionViewCellTwo.swift in Sources */,
