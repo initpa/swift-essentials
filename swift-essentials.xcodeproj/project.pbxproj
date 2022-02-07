@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C717F90B27B14CCA00CF330A /* URLSessionEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C717F90A27B14CCA00CF330A /* URLSessionEx.swift */; };
 		C734594C2657775100B0D97C /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C734594B2657775100B0D97C /* CollectionViewController.swift */; };
 		C734594E2657776E00B0D97C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C734594D2657776E00B0D97C /* TableViewController.swift */; };
 		C7345951265780D400B0D97C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7345950265780D400B0D97C /* TableViewCell.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C717F90A27B14CCA00CF330A /* URLSessionEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionEx.swift; sourceTree = "<group>"; };
 		C734594B2657775100B0D97C /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		C734594D2657776E00B0D97C /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		C7345950265780D400B0D97C /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				C7CF6651263D320600C1D639 /* Extentions.swift */,
+				C717F90A27B14CCA00CF330A /* URLSessionEx.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				C7CF6652263D320600C1D639 /* Extentions.swift in Sources */,
 				C734594E2657776E00B0D97C /* TableViewController.swift in Sources */,
 				C76FDBF3263B0EB20079EA59 /* ViewController.swift in Sources */,
+				C717F90B27B14CCA00CF330A /* URLSessionEx.swift in Sources */,
 				C7E3C9D72666238C001F0570 /* KanyeQuoteManager.swift in Sources */,
 				C76FDBEF263B0EB20079EA59 /* AppDelegate.swift in Sources */,
 				C76FDBF1263B0EB20079EA59 /* SceneDelegate.swift in Sources */,
